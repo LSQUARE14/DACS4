@@ -1,0 +1,24 @@
+services:
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    volumes:
+      - nginx_logs:/var/log/nginx
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+  fail2ban:
+    build: ./fail2ban
+    container_name: fail2ban
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - nginx_logs:/var/log/nginx:ro
+    depends_on:
+      - nginx
+    restart: unless-stopped
+
+volumes:
+  nginx_logs:
