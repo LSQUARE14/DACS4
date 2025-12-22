@@ -19,10 +19,10 @@ findtime = 5s
 maxretry = 50
 bantime  = 5m
 
-[sshd]
+[sshd-pam]
 enabled  = true
 port     = 2222
-filter   = sshd
+filter   = sshd-pam
 logpath  = /logs/ssh/auth.log
 maxretry = 5
 findtime = 10m
