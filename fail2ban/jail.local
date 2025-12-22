@@ -1,10 +1,29 @@
 [DEFAULT]
-bantime  = 10m
-findtime = 1m
+bantime  = 5m
+findtime = 10m
 maxretry = 3
+banaction = iptables-multiport
 
 [nginx-4xx]
 enabled  = true
 port     = http
 filter   = nginx-4xx
-logpath  = /var/log/nginx/access.log
+logpath  = /logs/nginx/access.log
+
+[nginx-flood]
+enabled  = true
+port     = http
+filter   = nginx-flood
+logpath  = /logs/nginx/access.log
+findtime = 5s
+maxretry = 50
+bantime  = 5m
+
+[sshd]
+enabled  = true
+port     = 2222
+filter   = sshd
+logpath  = /logs/ssh/auth.log
+maxretry = 5
+findtime = 10m
+bantime  = 5m

@@ -1,10 +1,286 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Nginx</title>
+    <title>Sunny Shop</title>
+    <style>
+        :root {
+            --bg: #fff7ed;
+            --card: #ffffff;
+            --accent: #f97316;
+            --accent-soft: #ffedd5;
+            --text: #1f2933;
+            --muted: #6b7280;
+            --border: #fed7aa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #fffbeb, #fed7aa);
+            color: var(--text);
+        }
+
+        .page {
+            width: 100%;
+            max-width: 960px;
+            padding: 24px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 18px;
+            padding: 20px 22px 18px;
+            border: 1px solid var(--border);
+            box-shadow: 0 18px 35px rgba(248, 113, 22, 0.25);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 34px;
+            height: 34px;
+            border-radius: 999px;
+            background: radial-gradient(circle at 30% 20%, #facc15, #f97316 45%, #c2410c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fefce8;
+            font-weight: 800;
+            font-size: 18px;
+            box-shadow: 0 10px 25px rgba(194, 65, 12, 0.45);
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .title h1 {
+            margin: 0;
+            font-size: 22px;
+            letter-spacing: 0.03em;
+        }
+
+        .title p {
+            margin: 0;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .badge {
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 11px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #dcfce7;
+            border: 1px solid #bbf7d0;
+            color: #166534;
+            white-space: nowrap;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: radial-gradient(circle at 30% 30%, #bbf7d0, #22c55e 60%, #16a34a 100%);
+            box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 6fr) minmax(0, 4fr);
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .section {
+            padding-top: 10px;
+            border-top: 1px solid #fed7aa;
+        }
+
+        .section h2 {
+            margin: 0 0 8px;
+            font-size: 13px;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .section p {
+            margin: 0 0 8px;
+            font-size: 13px;
+            color: var(--text);
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+        }
+
+        .product {
+            padding: 8px 10px;
+            border-radius: 12px;
+            background: var(--accent-soft);
+            border: 1px solid var(--border);
+        }
+
+        .product-name {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .rules {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 8px;
+        }
+
+        .rule {
+            padding: 7px 9px;
+            border-radius: 10px;
+            background: #fef3c7;
+            border: 1px dashed #facc15;
+            font-size: 12px;
+        }
+
+        .rule strong {
+            color: #b45309;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-top: 6px;
+            padding-top: 8px;
+            border-top: 1px dashed #fed7aa;
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .chip {
+            padding: 4px 8px;
+            border-radius: 999px;
+            border: 1px solid #fdba74;
+            background: #fff7ed;
+        }
+
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            background: #fef3c7;
+            padding: 1px 4px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 720px) {
+            .card { padding: 16px 14px 14px; }
+            .grid { grid-template-columns: minmax(0, 1fr); }
+        }
+    </style>
 </head>
 <body>
-    <p>Nginx web server works fine</p>
+<div class="page">
+    <div class="card">
+        <div class="header">
+            <div class="brand">
+                <div class="logo">S</div>
+                <div class="title">
+                    <h1>Sunny Shop</h1>
+                    <p>Gian hàng nhỏ, tường lửa to</p>
+                </div>
+            </div>
+            <div class="badge">
+                <span class="dot"></span>
+                Bảo vệ bởi Fail2Ban
+            </div>
+        </div>
+
+        <div class="grid">
+            <section class="section">
+                <h2>Sản phẩm nổi bật</h2>
+                <p>Shop demo vui tươi, phía sau vẫn là Nginx + Fail2Ban chống DOS và brute-force SSH.</p>
+                <div class="products">
+                    <div class="product">
+                        <div class="product-name">Gói “Chống DOS”</div>
+                        <div class="product-meta">
+                            <span>50 req / 5 giây</span>
+                            <span>Cấm 5 phút</span>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-name">Gói “Khóa SSH”</div>
+                        <div class="product-meta">
+                            <span>5 lần sai pass</span>
+                            <span>Cấm 5 phút</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Luật bảo vệ</h2>
+                <ul class="rules">
+                    <li class="rule">
+                        <strong>Web / DOS:</strong>
+                        Nếu 1 IP gửi hơn 50 request vào web trong 5 giây,
+                        IP đó bị chặn trong 5 phút.
+                    </li>
+                    <li class="rule">
+                        <strong>SSH:</strong>
+                        Nếu 1 IP nhập sai mật khẩu SSH 5 lần,
+                        IP đó bị chặn trong 5 phút.
+                    </li>
+                    <li class="rule">
+                        <strong>Test nhanh:</strong>
+                        HTTP: <code>curl http://localhost:8080/</code><br>
+                        SSH: <code>ssh root@localhost -p 2222</code>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="footer">
+            <span>Sunny Shop chạy trên <strong>Nginx</strong> &amp; <strong>Fail2Ban</strong>.</span>
+            <span class="chip">Giao diện demo &mdash; HTML tĩnh</span>
+        </div>
+    </div>
+</div>
 </body>
 </html>

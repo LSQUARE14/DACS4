@@ -7,7 +7,7 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/html:/usr/share/nginx/html:rw
-      - nginx_logs:/var/log/nginx
+      - nginx_logs:/var/log/dacs4-nginx
     restart: unless-stopped
 
   fail2ban:
@@ -17,10 +17,22 @@ services:
     cap_add:
       - NET_ADMIN
     volumes:
-      - nginx_logs:/var/log/nginx:ro
+      - nginx_logs:/logs/nginx:ro
+      - ssh_logs:/logs/ssh:ro
     depends_on:
       - nginx
+      - sshd
+    restart: unless-stopped
+
+  sshd:
+    build: ./sshd
+    container_name: sshd
+    ports:
+      - "2222:22"
+    volumes:
+      - ssh_logs:/var/log
     restart: unless-stopped
 
 volumes:
   nginx_logs:
+  ssh_logs:
