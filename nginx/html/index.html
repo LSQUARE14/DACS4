@@ -3,53 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunny Shop</title>
+    <title>Nova Store | Cửa hàng tinh gọn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #fff7ed;
+            --bg: #fffaf0;
             --card: #ffffff;
-            --accent: #f97316;
-            --accent-soft: #ffedd5;
+            --panel: #fff6e0;
             --text: #1f2933;
             --muted: #6b7280;
-            --border: #fed7aa;
+            --accent: #fbbf24;
+            --accent-2: #f59e0b;
+            --border: rgba(251, 191, 36, 0.35);
+            --glow: 0 18px 38px rgba(251, 191, 36, 0.25);
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top, #fffbeb, #fed7aa);
+            font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at 20% 25%, rgba(251, 191, 36, 0.18), transparent 28%),
+                        radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.7), transparent 35%),
+                        linear-gradient(120deg, #fff7e6, #fffaf0 45%, #ffffff);
             color: var(--text);
+            display: flex;
+            justify-content: center;
+            padding: 32px 16px 48px;
         }
 
         .page {
             width: 100%;
-            max-width: 960px;
-            padding: 24px;
+            max-width: 1180px;
         }
 
-        .card {
-            background: var(--card);
-            border-radius: 18px;
-            padding: 20px 22px 18px;
-            border: 1px solid var(--border);
-            box-shadow: 0 18px 35px rgba(248, 113, 22, 0.25);
-        }
-
-        .header {
+        .nav {
             display: flex;
+            align-items: center;
             justify-content: space-between;
             gap: 12px;
-            align-items: center;
-            margin-bottom: 16px;
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 14px 18px;
+            backdrop-filter: blur(14px);
+            box-shadow: var(--glow);
         }
 
         .brand {
@@ -59,228 +60,413 @@
         }
 
         .logo {
-            width: 34px;
-            height: 34px;
-            border-radius: 999px;
-            background: radial-gradient(circle at 30% 20%, #facc15, #f97316 45%, #c2410c 100%);
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b 45%, #f97316);
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            color: #7c2d12;
+            box-shadow: 0 14px 35px rgba(251, 191, 36, 0.32);
+        }
+
+        .brand-text h1 {
+            margin: 0;
+            font-size: 18px;
+            letter-spacing: 0.04em;
+        }
+
+        .brand-text p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .nav-links {
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: #fefce8;
-            font-weight: 800;
-            font-size: 18px;
-            box-shadow: 0 10px 25px rgba(194, 65, 12, 0.45);
+            gap: 12px;
         }
 
-        .title {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-
-        .title h1 {
-            margin: 0;
-            font-size: 22px;
-            letter-spacing: 0.03em;
-        }
-
-        .title p {
-            margin: 0;
-            font-size: 13px;
+        .pill {
+            padding: 8px 12px;
+            border-radius: 12px;
+            background: #fffaf0;
+            border: 1px solid var(--border);
             color: var(--muted);
+            font-size: 13px;
         }
 
-        .badge {
-            padding: 4px 10px;
-            border-radius: 999px;
-            font-size: 11px;
+        .btn {
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: none;
+            color: #7c2d12;
+            background: linear-gradient(120deg, #fbbf24, #f59e0b);
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 16px 30px rgba(251, 191, 36, 0.32);
+        }
+
+        .hero {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 18px;
+        }
+
+        .hero-card {
+            background: linear-gradient(145deg, rgba(251, 191, 36, 0.16), rgba(245, 158, 11, 0.12));
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 22px;
+            box-shadow: var(--glow);
+        }
+
+        .hero-tag {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            background: #dcfce7;
-            border: 1px solid #bbf7d0;
-            color: #166534;
-            white-space: nowrap;
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 999px;
-            background: radial-gradient(circle at 30% 30%, #bbf7d0, #22c55e 60%, #16a34a 100%);
-            box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(0, 6fr) minmax(0, 4fr);
-            gap: 14px;
-            margin-bottom: 14px;
-        }
-
-        .section {
-            padding-top: 10px;
-            border-top: 1px solid #fed7aa;
-        }
-
-        .section h2 {
-            margin: 0 0 8px;
-            font-size: 13px;
-            color: var(--muted);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .section p {
-            margin: 0 0 8px;
-            font-size: 13px;
-            color: var(--text);
-        }
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 8px;
-        }
-
-        .product {
-            padding: 8px 10px;
+            padding: 7px 12px;
             border-radius: 12px;
-            background: var(--accent-soft);
-            border: 1px solid var(--border);
-        }
-
-        .product-name {
-            font-size: 13px;
+            border: 1px solid rgba(251, 191, 36, 0.4);
+            background: rgba(251, 191, 36, 0.12);
+            color: #b45309;
             font-weight: 600;
-            margin-bottom: 2px;
-        }
-
-        .product-meta {
-            display: flex;
-            justify-content: space-between;
-            font-size: 11px;
-            color: var(--muted);
-        }
-
-        .rules {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            gap: 8px;
-        }
-
-        .rule {
-            padding: 7px 9px;
-            border-radius: 10px;
-            background: #fef3c7;
-            border: 1px dashed #facc15;
             font-size: 12px;
         }
 
-        .rule strong {
-            color: #b45309;
+        .hero h2 {
+            margin: 12px 0 8px;
+            font-size: 32px;
+            letter-spacing: -0.02em;
         }
 
-        .footer {
+        .hero p {
+            margin: 0 0 16px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: #ffffff;
+            color: var(--text);
+            font-weight: 600;
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+        }
+
+        .stat-row {
+            margin-top: 18px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .stat {
+            padding: 12px;
+            border-radius: 12px;
+            background: #ffffff;
+            border: 1px solid var(--border);
+        }
+
+        .stat strong { display: block; font-size: 18px; }
+        .stat span { color: var(--muted); font-size: 12px; }
+
+        .side-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 18px;
+            display: grid;
+            gap: 12px;
+            box-shadow: var(--glow);
+        }
+
+        .side-card h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .feature-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .feature {
+            padding: 12px;
+            border-radius: 12px;
+            background: #fffaf0;
+            border: 1px solid var(--border);
+            display: grid;
+            gap: 6px;
+        }
+
+        .feature strong { font-size: 14px; }
+        .feature p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .section {
+            margin-top: 22px;
+        }
+
+        .section-head {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 10px;
-            margin-top: 6px;
-            padding-top: 8px;
-            border-top: 1px dashed #fed7aa;
-            font-size: 11px;
+            margin-bottom: 12px;
+        }
+
+        .section-head h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .section-head span {
             color: var(--muted);
+            font-size: 13px;
         }
 
-        .chip {
-            padding: 4px 8px;
-            border-radius: 999px;
-            border: 1px solid #fdba74;
-            background: #fff7ed;
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
         }
 
-        code {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            background: #fef3c7;
-            padding: 1px 4px;
-            border-radius: 4px;
+        .product {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 14px;
+            display: grid;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
         }
 
-        @media (max-width: 720px) {
-            .card { padding: 16px 14px 14px; }
-            .grid { grid-template-columns: minmax(0, 1fr); }
+        .product::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(251, 191, 36, 0.12), transparent 40%);
+            pointer-events: none;
+        }
+
+        .product-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            background: rgba(245, 158, 11, 0.12);
+            color: #92400e;
+            font-size: 12px;
+        }
+
+        .product h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .product p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #b45309;
+        }
+
+        .tagline { color: var(--muted); font-size: 13px; }
+
+        .testimonial {
+            margin-top: 20px;
+            background: linear-gradient(120deg, rgba(251, 191, 36, 0.2), rgba(245, 158, 11, 0.16));
+            border: 1px solid rgba(251, 191, 36, 0.45);
+            border-radius: 16px;
+            padding: 16px;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .quote {
+            margin: 0;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        .quote strong { color: #b45309; }
+        .customer { color: var(--muted); font-size: 13px; }
+
+        .footer {
+            margin-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        @media (max-width: 960px) {
+            .hero { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 640px) {
+            .nav { flex-direction: column; align-items: flex-start; }
+            .nav-links { width: 100%; justify-content: space-between; }
+            .stat-row { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body>
-<div class="page">
-    <div class="card">
-        <div class="header">
-            <div class="brand">
-                <div class="logo">S</div>
-                <div class="title">
-                    <h1>Sunny Shop</h1>
-                    <p>Gian hàng nhỏ, tường lửa to</p>
-                </div>
-            </div>
-            <div class="badge">
-                <span class="dot"></span>
-                Bảo vệ bởi Fail2Ban
+<main class="page">
+    <header class="nav">
+        <div class="brand">
+            <div class="logo">N</div>
+            <div class="brand-text">
+                <h1>Nova Store</h1>
+                <p>Cửa hàng tinh gọn, giao diện tinh tế</p>
             </div>
         </div>
+        <div class="nav-links">
+            <span class="pill">Thời trang</span>
+            <span class="pill">Công nghệ</span>
+            <span class="pill">Trang trí</span>
+            <button class="btn">Khám phá ngay</button>
+        </div>
+    </header>
 
-        <div class="grid">
-            <section class="section">
-                <h2>Sản phẩm nổi bật</h2>
-                <p>Shop demo vui tươi, phía sau vẫn là Nginx + Fail2Ban chống DOS và brute-force SSH.</p>
-                <div class="products">
-                    <div class="product">
-                        <div class="product-name">Gói “Chống DOS”</div>
-                        <div class="product-meta">
-                            <span>50 req / 5 giây</span>
-                            <span>Cấm 5 phút</span>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="product-name">Gói “Khóa SSH”</div>
-                        <div class="product-meta">
-                            <span>5 lần sai pass</span>
-                            <span>Cấm 5 phút</span>
-                        </div>
-                    </div>
+    <section class="hero">
+        <div class="hero-card">
+            <div class="hero-tag">Thiết kế mới · Giao diện tối</div>
+            <h2>Trang bán hàng cơ bản, nổi bật và gọn nhẹ.</h2>
+            <p>Giới thiệu sản phẩm, giá bán và điểm nhấn chỉ với một trang tĩnh. Bố cục rõ ràng, dễ mở rộng cho bất kỳ nền tảng hoặc stack backend.</p>
+            <div class="hero-actions">
+                <button class="btn">Xem bộ sưu tập</button>
+                <button class="btn-secondary">Tải bảng giá</button>
+            </div>
+            <div class="stat-row">
+                <div class="stat">
+                    <strong>120+</strong>
+                    <span>Sản phẩm sẵn sàng</span>
                 </div>
-            </section>
-
-            <section class="section">
-                <h2>Luật bảo vệ</h2>
-                <ul class="rules">
-                    <li class="rule">
-                        <strong>Web / DOS:</strong>
-                        Nếu 1 IP gửi hơn 50 request vào web trong 5 giây,
-                        IP đó bị chặn trong 5 phút.
-                    </li>
-                    <li class="rule">
-                        <strong>SSH:</strong>
-                        Nếu 1 IP nhập sai mật khẩu SSH 5 lần,
-                        IP đó bị chặn trong 5 phút.
-                    </li>
-                    <li class="rule">
-                        <strong>Test nhanh:</strong>
-                        HTTP: <code>curl http://localhost:8080/</code><br>
-                        SSH: <code>ssh root@localhost -p 2222</code>
-                    </li>
-                </ul>
-            </section>
+                <div class="stat">
+                    <strong>4.9/5</strong>
+                    <span>Đánh giá từ khách</span>
+                </div>
+                <div class="stat">
+                    <strong>48h</strong>
+                    <span>Giao nhanh toàn quốc</span>
+                </div>
+            </div>
         </div>
 
-        <div class="footer">
-            <span>Sunny Shop chạy trên <strong>Nginx</strong> &amp; <strong>Fail2Ban</strong>.</span>
-            <span class="chip">Giao diện demo &mdash; HTML tĩnh</span>
+        <div class="side-card">
+            <h3>Lý do chọn Nova</h3>
+            <div class="feature-list">
+                <div class="feature">
+                    <strong>Thiết kế đậm chất thương hiệu</strong>
+                    <p>Gam màu neon hiện đại, dùng tốt cho cả thời trang, decor hay thiết bị công nghệ.</p>
+                </div>
+                <div class="feature">
+                    <strong>Chỉ HTML + CSS thuần</strong>
+                    <p>Dễ nhúng vào bất kỳ server nào: Nginx, Apache hoặc static hosting.</p>
+                </div>
+                <div class="feature">
+                    <strong>Bố cục một trang</strong>
+                    <p>Có hero, danh mục, lưới sản phẩm, testimonial và chân trang đầy đủ.</p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
+
+    <section class="section">
+        <div class="section-head">
+            <h3>Bộ sưu tập nổi bật</h3>
+            <span>Mix giữa công nghệ, thời trang và trang trí nhà cửa.</span>
+        </div>
+        <div class="product-grid">
+            <article class="product">
+                <div class="product-badge">Tech</div>
+                <h4>Tai nghe Cloud Glow</h4>
+                <p>Âm thanh ấm, chống ồn chủ động, đèn viền RGB dịu mắt.</p>
+                <div class="price-row">
+                    <span class="price">1.590.000đ</span>
+                    <span class="tagline">Giao trong 24h</span>
+                </div>
+            </article>
+            <article class="product">
+                <div class="product-badge">Lifestyle</div>
+                <h4>Đèn bàn Aurora</h4>
+                <p>Ánh sáng ba chế độ, thân kim loại mờ, sạc Type-C.</p>
+                <div class="price-row">
+                    <span class="price">890.000đ</span>
+                    <span class="tagline">Bảo hành 12 tháng</span>
+                </div>
+            </article>
+            <article class="product">
+                <div class="product-badge">Fashion</div>
+                <h4>Áo khoác Nebula</h4>
+                <p>Chống thấm nhẹ, phản quang họa tiết, form unisex.</p>
+                <div class="price-row">
+                    <span class="price">1.250.000đ</span>
+                    <span class="tagline">Size S - XL</span>
+                </div>
+            </article>
+            <article class="product">
+                <div class="product-badge">Decor</div>
+                <h4>Tranh LED Gradient</h4>
+                <p>Khung nhôm tối giản, điều khiển màu qua remote đi kèm.</p>
+                <div class="price-row">
+                    <span class="price">1.150.000đ</span>
+                    <span class="tagline">Đổi trả 7 ngày</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <div class="logo">★</div>
+        <div>
+            <p class="quote">“Giao diện một trang của Nova Store giúp tôi trình bày sản phẩm nhanh, gọn và đẹp mắt. Chỉ cần thêm backend là có ngay gian hàng hoàn chỉnh.”</p>
+            <div class="customer">Mai Anh · Chủ shop decor</div>
+        </div>
+        <button class="btn-secondary">Xem thêm đánh giá</button>
+    </section>
+
+    <footer class="footer">
+        <span>Nova Store · HTML tĩnh · Sẵn sàng triển khai trên Nginx</span>
+        <span>Hotline: 0909 999 888 · hello@novastore.vn</span>
+    </footer>
+</main>
 </body>
 </html>

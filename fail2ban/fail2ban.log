@@ -559,3 +559,52 @@
 2025-12-23 08:35:10,543 fail2ban.actions        [1]: NOTICE  [nginx-scan] Ban 192.168.65.1
 2025-12-23 08:35:17,953 fail2ban.filter         [1]: INFO    [nginx-scan] Found 192.168.65.1 - 2025-12-23 08:35:17
 2025-12-23 08:35:17,953 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:35:17
+2025-12-23 08:59:54,360 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-12-23 08:59:54,360 fail2ban.server         [1]: INFO    Starting Fail2ban v1.1.0
+2025-12-23 08:59:54,362 fail2ban.observer       [1]: INFO    Observer start...
+2025-12-23 08:59:54,370 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-12-23 08:59:54,372 fail2ban.database       [1]: WARNING New database created. Version '4'
+2025-12-23 08:59:54,373 fail2ban.jail           [1]: INFO    Creating new jail 'sshd'
+2025-12-23 08:59:54,382 fail2ban.jail           [1]: INFO    Jail 'sshd' uses systemd {}
+2025-12-23 08:59:54,383 fail2ban.jail           [1]: INFO    Initiated 'systemd' backend
+2025-12-23 08:59:54,385 fail2ban.filter         [1]: INFO      maxLines: 1
+2025-12-23 08:59:54,399 fail2ban.filtersystemd  [1]: INFO    [sshd] Added journal match for: '_SYSTEMD_UNIT=ssh.service + _COMM=sshd'
+2025-12-23 08:59:54,400 fail2ban.filter         [1]: INFO      maxRetry: 5
+2025-12-23 08:59:54,400 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 08:59:54,401 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 08:59:54,401 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:59:54,402 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-scan'
+2025-12-23 08:59:54,411 fail2ban.jail           [1]: INFO    Jail 'nginx-scan' uses pyinotify {}
+2025-12-23 08:59:54,413 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 08:59:54,413 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-12-23 08:59:54,414 fail2ban.filter         [1]: INFO      findtime: 1
+2025-12-23 08:59:54,414 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 08:59:54,415 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:59:54,417 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 0, hash = 2e2dfc9cf5b925514f400915aa7da201e3e90267)
+2025-12-23 08:59:54,419 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-4xx'
+2025-12-23 08:59:54,419 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' uses pyinotify {}
+2025-12-23 08:59:54,421 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 08:59:54,422 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-12-23 08:59:54,422 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 08:59:54,423 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 08:59:54,423 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:59:54,425 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 0, hash = 2e2dfc9cf5b925514f400915aa7da201e3e90267)
+2025-12-23 08:59:54,426 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-flood'
+2025-12-23 08:59:54,426 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' uses pyinotify {}
+2025-12-23 08:59:54,428 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 08:59:54,429 fail2ban.filter         [1]: INFO      maxRetry: 15
+2025-12-23 08:59:54,429 fail2ban.filter         [1]: INFO      findtime: 5
+2025-12-23 08:59:54,430 fail2ban.actions        [1]: INFO      banTime: 60
+2025-12-23 08:59:54,430 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:59:54,432 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 0, hash = 2e2dfc9cf5b925514f400915aa7da201e3e90267)
+2025-12-23 08:59:54,433 fail2ban.filtersystemd  [1]: INFO    [sshd] Jail is in operation now (process new journal entries)
+2025-12-23 08:59:54,434 fail2ban.jail           [1]: INFO    Jail 'sshd' started
+2025-12-23 08:59:54,435 fail2ban.jail           [1]: INFO    Jail 'nginx-scan' started
+2025-12-23 08:59:54,436 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' started
+2025-12-23 08:59:54,448 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' started
+2025-12-23 09:00:00,835 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:00:00,835 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:00:01,043 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:00:01,043 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:01:16,342 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:01:16,343 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
