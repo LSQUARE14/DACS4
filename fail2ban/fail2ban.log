@@ -187,3 +187,375 @@
 2025-12-23 03:06:15,172 fail2ban.transmitter    [1]: ERROR   Command ['get', 'nginx-4xx', 'banlist'] has failed. Received Exception('Invalid command (no get action or not yet implemented)')
 2025-12-23 03:06:26,886 fail2ban.transmitter    [1]: ERROR   Command ['get', 'nginx-4xx', 'banlist'] has failed. Received Exception('Invalid command (no get action or not yet implemented)')
 2025-12-23 03:06:30,737 fail2ban.transmitter    [1]: ERROR   Command ['get', 'nginx-4xx', 'banlistdocker', 'exec', '-it', 'fail2ban', 'fail2ban-client', 'get', 'nginx-4xx', 'banlist'] has failed. Received Exception('Invalid command (no get action or not yet implemented)')
+2025-12-23 03:31:04,848 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 03:31:04
+2025-12-23 03:32:19,595 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 03:32:19
+2025-12-23 03:33:34,972 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 03:33:34
+2025-12-23 03:34:47,154 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 03:34:46
+2025-12-23 03:34:47,603 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 03:34:47
+2025-12-23 03:34:47,851 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 03:34:47
+2025-12-23 06:50:15,988 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-12-23 06:50:15,988 fail2ban.server         [1]: INFO    Starting Fail2ban v1.1.0
+2025-12-23 06:50:15,990 fail2ban.observer       [1]: INFO    Observer start...
+2025-12-23 06:50:15,990 fail2ban.asyncserver    [1]: ERROR   Fail2ban seems to be already running
+2025-12-23 06:50:15,991 fail2ban.asyncserver    [1]: WARNING Forcing execution of the server
+2025-12-23 06:50:16,001 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-12-23 06:50:16,005 fail2ban.jail           [1]: INFO    Creating new jail 'sshd'
+2025-12-23 06:50:16,021 fail2ban.jail           [1]: INFO    Jail 'sshd' uses systemd {}
+2025-12-23 06:50:16,025 fail2ban.jail           [1]: INFO    Initiated 'systemd' backend
+2025-12-23 06:50:16,028 fail2ban.filter         [1]: INFO      maxLines: 1
+2025-12-23 06:50:16,073 fail2ban.filtersystemd  [1]: INFO    [sshd] Added journal match for: '_SYSTEMD_UNIT=ssh.service + _COMM=sshd'
+2025-12-23 06:50:16,074 fail2ban.filter         [1]: INFO      maxRetry: 5
+2025-12-23 06:50:16,074 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 06:50:16,075 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 06:50:16,075 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 06:50:16,076 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-4xx'
+2025-12-23 06:50:16,110 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' uses pyinotify {}
+2025-12-23 06:50:16,114 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 06:50:16,118 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-12-23 06:50:16,119 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 06:50:16,120 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 06:50:16,121 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 06:50:16,124 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 15845, hash = b7d8de338bf2e9c9e1fb7feaf804160d10c95363)
+2025-12-23 06:50:16,126 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-flood'
+2025-12-23 06:50:16,128 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' uses pyinotify {}
+2025-12-23 06:50:16,134 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 06:50:16,137 fail2ban.filter         [1]: INFO      maxRetry: 15
+2025-12-23 06:50:16,138 fail2ban.filter         [1]: INFO      findtime: 5
+2025-12-23 06:50:16,139 fail2ban.actions        [1]: INFO      banTime: 60
+2025-12-23 06:50:16,140 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 06:50:16,141 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 15845, hash = b7d8de338bf2e9c9e1fb7feaf804160d10c95363)
+2025-12-23 06:50:16,145 fail2ban.filtersystemd  [1]: INFO    [sshd] Jail is in operation now (process new journal entries)
+2025-12-23 06:50:16,147 fail2ban.jail           [1]: INFO    Jail 'sshd' started
+2025-12-23 06:50:16,150 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' started
+2025-12-23 06:50:16,232 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' started
+2025-12-23 07:05:30,924 fail2ban.filter         [1]: INFO    [nginx-flood] Found 172.23.0.1 - 2025-12-23 07:05:30
+2025-12-23 07:23:55,494 fail2ban.filter         [1]: INFO    [nginx-flood] Found 172.23.0.1 - 2025-12-23 07:23:55
+2025-12-23 07:25:11,022 fail2ban.filter         [1]: INFO    [nginx-flood] Found 172.23.0.1 - 2025-12-23 07:25:10
+2025-12-23 07:26:25,724 fail2ban.filter         [1]: INFO    [nginx-flood] Found 172.23.0.1 - 2025-12-23 07:26:25
+2025-12-23 07:28:25,357 fail2ban.filter         [1]: INFO    [nginx-flood] Found 172.23.0.1 - 2025-12-23 07:28:25
+2025-12-23 07:29:40,510 fail2ban.filter         [1]: INFO    [nginx-flood] Found 172.23.0.1 - 2025-12-23 07:29:40
+2025-12-23 07:30:56,008 fail2ban.filter         [1]: INFO    [nginx-flood] Found 172.23.0.1 - 2025-12-23 07:30:55
+2025-12-23 07:32:10,650 fail2ban.filter         [1]: INFO    [nginx-flood] Found 172.23.0.1 - 2025-12-23 07:32:10
+2025-12-23 07:33:25,776 fail2ban.filter         [1]: INFO    [nginx-flood] Found 172.23.0.1 - 2025-12-23 07:33:25
+2025-12-23 07:34:41,193 fail2ban.filter         [1]: INFO    [nginx-flood] Found 172.23.0.1 - 2025-12-23 07:34:40
+2025-12-23 07:35:55,976 fail2ban.filter         [1]: INFO    [nginx-flood] Found 172.23.0.1 - 2025-12-23 07:35:55
+2025-12-23 08:05:49,332 fail2ban.server         [1]: INFO    Shutdown in progress...
+2025-12-23 08:05:49,332 fail2ban.observer       [1]: INFO    Observer stop ... try to end queue 5 seconds
+2025-12-23 08:05:49,353 fail2ban.observer       [1]: INFO    Observer stopped, 0 events remaining.
+2025-12-23 08:05:49,396 fail2ban.server         [1]: INFO    Stopping all jails
+2025-12-23 08:05:49,397 fail2ban.filter         [1]: INFO    Removed logfile: '/var/logs/nginx/access.log'
+2025-12-23 08:05:49,397 fail2ban.filter         [1]: INFO    Removed logfile: '/var/logs/nginx/access.log'
+2025-12-23 08:05:49,619 fail2ban.actions        [1]: NOTICE  [nginx-4xx] Flush ticket(s) with iptables-multiport
+2025-12-23 08:05:49,894 fail2ban.actions        [1]: NOTICE  [nginx-flood] Flush ticket(s) with iptables-multiport
+2025-12-23 08:05:50,006 fail2ban.actions        [1]: NOTICE  [sshd] Flush ticket(s) with iptables-multiport
+2025-12-23 08:05:50,105 fail2ban.jail           [1]: INFO    Jail 'sshd' stopped
+2025-12-23 08:05:50,106 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' stopped
+2025-12-23 08:05:50,106 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' stopped
+2025-12-23 08:05:50,107 fail2ban.database       [1]: INFO    Connection to database closed.
+2025-12-23 08:05:50,107 fail2ban.server         [1]: INFO    Exiting Fail2ban
+2025-12-23 08:05:50,747 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-12-23 08:05:50,747 fail2ban.server         [1]: INFO    Starting Fail2ban v1.1.0
+2025-12-23 08:05:50,749 fail2ban.observer       [1]: INFO    Observer start...
+2025-12-23 08:05:50,757 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-12-23 08:05:50,758 fail2ban.database       [1]: WARNING New database created. Version '4'
+2025-12-23 08:05:50,758 fail2ban.jail           [1]: INFO    Creating new jail 'sshd'
+2025-12-23 08:05:50,760 fail2ban.jail           [1]: INFO    Jail 'sshd' uses systemd {}
+2025-12-23 08:05:50,761 fail2ban.jail           [1]: INFO    Initiated 'systemd' backend
+2025-12-23 08:05:50,761 fail2ban.filter         [1]: INFO      maxLines: 1
+2025-12-23 08:05:50,768 fail2ban.filtersystemd  [1]: INFO    [sshd] Added journal match for: '_SYSTEMD_UNIT=ssh.service + _COMM=sshd'
+2025-12-23 08:05:50,768 fail2ban.filter         [1]: INFO      maxRetry: 5
+2025-12-23 08:05:50,768 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 08:05:50,768 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 08:05:50,768 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:05:50,769 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-4xx'
+2025-12-23 08:05:50,800 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' uses pyinotify {}
+2025-12-23 08:05:50,801 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 08:05:50,801 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-12-23 08:05:50,801 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 08:05:50,801 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 08:05:50,802 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:05:50,802 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 0, hash = b7d8de338bf2e9c9e1fb7feaf804160d10c95363)
+2025-12-23 08:05:50,802 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-flood'
+2025-12-23 08:05:50,802 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' uses pyinotify {}
+2025-12-23 08:05:50,803 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 08:05:50,804 fail2ban.filter         [1]: INFO      maxRetry: 15
+2025-12-23 08:05:50,804 fail2ban.filter         [1]: INFO      findtime: 5
+2025-12-23 08:05:50,804 fail2ban.actions        [1]: INFO      banTime: 60
+2025-12-23 08:05:50,804 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:05:50,804 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 0, hash = b7d8de338bf2e9c9e1fb7feaf804160d10c95363)
+2025-12-23 08:05:50,805 fail2ban.filtersystemd  [1]: INFO    [sshd] Jail is in operation now (process new journal entries)
+2025-12-23 08:05:50,805 fail2ban.jail           [1]: INFO    Jail 'sshd' started
+2025-12-23 08:05:50,806 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' started
+2025-12-23 08:05:50,818 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' started
+2025-12-23 08:07:53,859 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:07:53
+2025-12-23 08:25:46,497 fail2ban.server         [1]: INFO    Shutdown in progress...
+2025-12-23 08:25:46,498 fail2ban.observer       [1]: INFO    Observer stop ... try to end queue 5 seconds
+2025-12-23 08:25:46,519 fail2ban.observer       [1]: INFO    Observer stopped, 0 events remaining.
+2025-12-23 08:25:46,561 fail2ban.server         [1]: INFO    Stopping all jails
+2025-12-23 08:25:46,561 fail2ban.filter         [1]: INFO    Removed logfile: '/var/logs/nginx/access.log'
+2025-12-23 08:25:46,571 fail2ban.filter         [1]: INFO    Removed logfile: '/var/logs/nginx/access.log'
+2025-12-23 08:25:47,238 fail2ban.actions        [1]: NOTICE  [sshd] Flush ticket(s) with iptables-multiport
+2025-12-23 08:25:47,240 fail2ban.jail           [1]: INFO    Jail 'sshd' stopped
+2025-12-23 08:25:47,331 fail2ban.actions        [1]: NOTICE  [nginx-4xx] Flush ticket(s) with iptables-multiport
+2025-12-23 08:25:47,332 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' stopped
+2025-12-23 08:25:47,333 fail2ban.actions        [1]: NOTICE  [nginx-flood] Flush ticket(s) with iptables-multiport
+2025-12-23 08:25:47,334 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' stopped
+2025-12-23 08:25:47,334 fail2ban.database       [1]: INFO    Connection to database closed.
+2025-12-23 08:25:47,335 fail2ban.server         [1]: INFO    Exiting Fail2ban
+2025-12-23 08:25:47,991 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-12-23 08:25:47,991 fail2ban.server         [1]: INFO    Starting Fail2ban v1.1.0
+2025-12-23 08:25:47,994 fail2ban.observer       [1]: INFO    Observer start...
+2025-12-23 08:25:48,002 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-12-23 08:25:48,003 fail2ban.database       [1]: WARNING New database created. Version '4'
+2025-12-23 08:25:48,003 fail2ban.jail           [1]: INFO    Creating new jail 'sshd'
+2025-12-23 08:25:48,005 fail2ban.jail           [1]: INFO    Jail 'sshd' uses systemd {}
+2025-12-23 08:25:48,006 fail2ban.jail           [1]: INFO    Initiated 'systemd' backend
+2025-12-23 08:25:48,007 fail2ban.filter         [1]: INFO      maxLines: 1
+2025-12-23 08:25:48,015 fail2ban.filtersystemd  [1]: INFO    [sshd] Added journal match for: '_SYSTEMD_UNIT=ssh.service + _COMM=sshd'
+2025-12-23 08:25:48,015 fail2ban.filter         [1]: INFO      maxRetry: 5
+2025-12-23 08:25:48,015 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 08:25:48,015 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 08:25:48,015 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:25:48,016 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-scan'
+2025-12-23 08:25:48,019 fail2ban.jail           [1]: INFO    Jail 'nginx-scan' uses pyinotify {}
+2025-12-23 08:25:48,020 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 08:25:48,020 fail2ban.filter         [1]: INFO      maxRetry: 20
+2025-12-23 08:25:48,021 fail2ban.filter         [1]: INFO      findtime: 20
+2025-12-23 08:25:48,021 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 08:25:48,021 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:25:48,022 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 0, hash = b7d8de338bf2e9c9e1fb7feaf804160d10c95363)
+2025-12-23 08:25:48,022 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-4xx'
+2025-12-23 08:25:48,023 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' uses pyinotify {}
+2025-12-23 08:25:48,024 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 08:25:48,025 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-12-23 08:25:48,025 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 08:25:48,025 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 08:25:48,025 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:25:48,026 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 0, hash = b7d8de338bf2e9c9e1fb7feaf804160d10c95363)
+2025-12-23 08:25:48,026 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-flood'
+2025-12-23 08:25:48,026 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' uses pyinotify {}
+2025-12-23 08:25:48,027 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 08:25:48,027 fail2ban.filter         [1]: INFO      maxRetry: 15
+2025-12-23 08:25:48,027 fail2ban.filter         [1]: INFO      findtime: 5
+2025-12-23 08:25:48,027 fail2ban.actions        [1]: INFO      banTime: 60
+2025-12-23 08:25:48,027 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:25:48,028 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 0, hash = b7d8de338bf2e9c9e1fb7feaf804160d10c95363)
+2025-12-23 08:25:48,028 fail2ban.filtersystemd  [1]: INFO    [sshd] Jail is in operation now (process new journal entries)
+2025-12-23 08:25:48,029 fail2ban.jail           [1]: INFO    Jail 'sshd' started
+2025-12-23 08:25:48,029 fail2ban.jail           [1]: INFO    Jail 'nginx-scan' started
+2025-12-23 08:25:48,038 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' started
+2025-12-23 08:25:48,039 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' started
+2025-12-23 08:26:48,603 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:26:48
+2025-12-23 08:26:48,603 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:26:48
+2025-12-23 08:27:13,036 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:27:13
+2025-12-23 08:27:13,052 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:27:13
+2025-12-23 08:27:13,053 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:27:13
+2025-12-23 08:27:13,056 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:27:13
+2025-12-23 08:27:20,569 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:27:20
+2025-12-23 08:27:50,574 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:27:50
+2025-12-23 08:27:50,590 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:27:50
+2025-12-23 08:27:50,592 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:27:50
+2025-12-23 08:27:50,592 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:27:50
+2025-12-23 08:27:58,203 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:27:58
+2025-12-23 08:28:41,075 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:41
+2025-12-23 08:28:45,887 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:45
+2025-12-23 08:28:45,888 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:45
+2025-12-23 08:28:45,888 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:45
+2025-12-23 08:28:45,897 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:45
+2025-12-23 08:28:46,128 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:46
+2025-12-23 08:28:46,161 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:46
+2025-12-23 08:28:46,304 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:46
+2025-12-23 08:28:46,343 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:46
+2025-12-23 08:28:46,464 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:46
+2025-12-23 08:28:46,499 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:46
+2025-12-23 08:28:46,642 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:46
+2025-12-23 08:28:46,675 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:46
+2025-12-23 08:28:46,791 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:46
+2025-12-23 08:28:46,829 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:46
+2025-12-23 08:28:46,956 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:46
+2025-12-23 08:28:46,980 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:46
+2025-12-23 08:28:46,981 fail2ban.actions        [1]: NOTICE  [nginx-flood] Ban 192.168.65.1
+2025-12-23 08:28:47,111 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:47
+2025-12-23 08:28:47,147 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:47
+2025-12-23 08:28:47,292 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:47
+2025-12-23 08:28:47,325 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:47
+2025-12-23 08:28:47,450 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:47
+2025-12-23 08:28:47,474 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:47
+2025-12-23 08:28:47,621 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:47
+2025-12-23 08:28:47,645 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:47
+2025-12-23 08:28:54,175 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:54
+2025-12-23 08:28:54,197 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:54
+2025-12-23 08:28:54,392 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:54
+2025-12-23 08:28:54,414 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:54
+2025-12-23 08:28:54,553 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:54
+2025-12-23 08:28:54,579 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:54
+2025-12-23 08:28:54,706 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:54
+2025-12-23 08:28:54,729 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:54
+2025-12-23 08:28:54,886 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:54
+2025-12-23 08:28:54,917 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:54
+2025-12-23 08:28:55,026 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:55
+2025-12-23 08:28:55,039 fail2ban.actions        [1]: NOTICE  [nginx-flood] 192.168.65.1 already banned
+2025-12-23 08:28:55,062 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:55
+2025-12-23 08:28:55,217 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:55
+2025-12-23 08:28:55,249 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:55
+2025-12-23 08:28:55,358 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:55
+2025-12-23 08:28:55,377 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:55
+2025-12-23 08:28:55,517 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:55
+2025-12-23 08:28:55,545 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:55
+2025-12-23 08:28:55,694 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:55
+2025-12-23 08:28:55,716 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:55
+2025-12-23 08:28:55,858 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:55
+2025-12-23 08:28:55,901 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:55
+2025-12-23 08:28:56,010 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:56
+2025-12-23 08:28:56,034 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:56
+2025-12-23 08:28:56,193 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:56
+2025-12-23 08:28:56,211 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:56
+2025-12-23 08:28:56,248 fail2ban.actions        [1]: NOTICE  [nginx-flood] 192.168.65.1 already banned
+2025-12-23 08:28:56,355 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:56
+2025-12-23 08:28:56,396 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:56
+2025-12-23 08:28:56,518 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:56
+2025-12-23 08:28:56,569 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:56
+2025-12-23 08:28:56,702 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:56
+2025-12-23 08:28:56,744 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:56
+2025-12-23 08:28:56,854 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:56
+2025-12-23 08:28:56,879 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:56
+2025-12-23 08:28:57,012 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:57
+2025-12-23 08:28:57,046 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:57
+2025-12-23 08:28:57,184 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:57
+2025-12-23 08:28:57,210 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:57
+2025-12-23 08:28:57,372 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:57
+2025-12-23 08:28:57,397 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:57
+2025-12-23 08:28:57,452 fail2ban.actions        [1]: NOTICE  [nginx-flood] 192.168.65.1 already banned
+2025-12-23 08:28:57,532 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:57
+2025-12-23 08:28:57,564 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:57
+2025-12-23 08:28:57,720 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:57
+2025-12-23 08:28:57,742 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:57
+2025-12-23 08:28:57,905 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:57
+2025-12-23 08:28:57,989 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:57
+2025-12-23 08:28:58,076 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:58
+2025-12-23 08:28:58,120 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:58
+2025-12-23 08:28:58,235 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:58
+2025-12-23 08:28:58,274 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:58
+2025-12-23 08:28:58,430 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:58
+2025-12-23 08:28:58,455 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:58
+2025-12-23 08:28:58,602 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:58
+2025-12-23 08:28:58,621 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:58
+2025-12-23 08:28:58,656 fail2ban.actions        [1]: NOTICE  [nginx-flood] 192.168.65.1 already banned
+2025-12-23 08:28:58,776 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:58
+2025-12-23 08:28:58,821 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:58
+2025-12-23 08:28:58,946 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:58
+2025-12-23 08:28:58,981 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:58
+2025-12-23 08:28:59,116 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:59
+2025-12-23 08:28:59,155 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:59
+2025-12-23 08:28:59,309 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:59
+2025-12-23 08:28:59,342 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:59
+2025-12-23 08:28:59,492 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:59
+2025-12-23 08:28:59,520 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:59
+2025-12-23 08:28:59,658 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:59
+2025-12-23 08:28:59,684 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:59
+2025-12-23 08:28:59,839 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:59
+2025-12-23 08:28:59,860 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:28:59
+2025-12-23 08:29:03,209 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:03
+2025-12-23 08:29:03,242 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:03
+2025-12-23 08:29:03,273 fail2ban.actions        [1]: NOTICE  [nginx-flood] 192.168.65.1 already banned
+2025-12-23 08:29:03,502 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:03
+2025-12-23 08:29:03,525 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:03
+2025-12-23 08:29:03,679 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:03
+2025-12-23 08:29:03,697 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:03
+2025-12-23 08:29:03,836 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:03
+2025-12-23 08:29:03,857 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:03
+2025-12-23 08:29:04,017 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:04
+2025-12-23 08:29:04,040 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:04
+2025-12-23 08:29:04,176 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:04
+2025-12-23 08:29:04,205 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:04
+2025-12-23 08:29:04,340 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:04
+2025-12-23 08:29:04,377 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:04
+2025-12-23 08:29:04,531 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:04
+2025-12-23 08:29:04,562 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:04
+2025-12-23 08:29:04,719 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:04
+2025-12-23 08:29:04,745 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:04
+2025-12-23 08:29:04,915 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:04
+2025-12-23 08:29:04,934 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:04
+2025-12-23 08:29:05,075 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:05
+2025-12-23 08:29:05,107 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:29:05
+2025-12-23 08:29:05,288 fail2ban.actions        [1]: NOTICE  [nginx-flood] 192.168.65.1 already banned
+2025-12-23 08:30:04,629 fail2ban.actions        [1]: NOTICE  [nginx-flood] Unban 192.168.65.1
+2025-12-23 08:30:20,476 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:30:20
+2025-12-23 08:30:55,676 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:30:55
+2025-12-23 08:30:55,693 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:30:55
+2025-12-23 08:30:55,695 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:30:55
+2025-12-23 08:30:55,697 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:30:55
+2025-12-23 08:31:03,210 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:31:03
+2025-12-23 08:31:35,175 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:31:35
+2025-12-23 08:32:50,269 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:32:50
+2025-12-23 08:34:05,635 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:34:05
+2025-12-23 08:35:05,040 fail2ban.server         [1]: INFO    Shutdown in progress...
+2025-12-23 08:35:05,050 fail2ban.observer       [1]: INFO    Observer stop ... try to end queue 5 seconds
+2025-12-23 08:35:05,071 fail2ban.observer       [1]: INFO    Observer stopped, 0 events remaining.
+2025-12-23 08:35:05,112 fail2ban.server         [1]: INFO    Stopping all jails
+2025-12-23 08:35:05,113 fail2ban.filter         [1]: INFO    Removed logfile: '/var/logs/nginx/access.log'
+2025-12-23 08:35:05,113 fail2ban.filter         [1]: INFO    Removed logfile: '/var/logs/nginx/access.log'
+2025-12-23 08:35:05,114 fail2ban.filter         [1]: INFO    Removed logfile: '/var/logs/nginx/access.log'
+2025-12-23 08:35:05,122 fail2ban.actions        [1]: NOTICE  [nginx-4xx] Flush ticket(s) with iptables-multiport
+2025-12-23 08:35:05,195 fail2ban.actions        [1]: NOTICE  [nginx-scan] Flush ticket(s) with iptables-multiport
+2025-12-23 08:35:05,218 fail2ban.actions        [1]: NOTICE  [sshd] Flush ticket(s) with iptables-multiport
+2025-12-23 08:35:05,219 fail2ban.jail           [1]: INFO    Jail 'sshd' stopped
+2025-12-23 08:35:05,335 fail2ban.actions        [1]: NOTICE  [nginx-flood] Flush ticket(s) with iptables-multiport
+2025-12-23 08:35:05,821 fail2ban.jail           [1]: INFO    Jail 'nginx-scan' stopped
+2025-12-23 08:35:05,823 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' stopped
+2025-12-23 08:35:05,824 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' stopped
+2025-12-23 08:35:05,825 fail2ban.database       [1]: INFO    Connection to database closed.
+2025-12-23 08:35:05,826 fail2ban.server         [1]: INFO    Exiting Fail2ban
+2025-12-23 08:35:06,495 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-12-23 08:35:06,495 fail2ban.server         [1]: INFO    Starting Fail2ban v1.1.0
+2025-12-23 08:35:06,506 fail2ban.observer       [1]: INFO    Observer start...
+2025-12-23 08:35:06,512 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-12-23 08:35:06,513 fail2ban.database       [1]: WARNING New database created. Version '4'
+2025-12-23 08:35:06,513 fail2ban.jail           [1]: INFO    Creating new jail 'sshd'
+2025-12-23 08:35:06,516 fail2ban.jail           [1]: INFO    Jail 'sshd' uses systemd {}
+2025-12-23 08:35:06,516 fail2ban.jail           [1]: INFO    Initiated 'systemd' backend
+2025-12-23 08:35:06,517 fail2ban.filter         [1]: INFO      maxLines: 1
+2025-12-23 08:35:06,524 fail2ban.filtersystemd  [1]: INFO    [sshd] Added journal match for: '_SYSTEMD_UNIT=ssh.service + _COMM=sshd'
+2025-12-23 08:35:06,524 fail2ban.filter         [1]: INFO      maxRetry: 5
+2025-12-23 08:35:06,524 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 08:35:06,524 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 08:35:06,524 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:35:06,524 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-scan'
+2025-12-23 08:35:06,527 fail2ban.jail           [1]: INFO    Jail 'nginx-scan' uses pyinotify {}
+2025-12-23 08:35:06,528 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 08:35:06,528 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-12-23 08:35:06,528 fail2ban.filter         [1]: INFO      findtime: 1
+2025-12-23 08:35:06,529 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 08:35:06,529 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:35:06,529 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 0, hash = b7d8de338bf2e9c9e1fb7feaf804160d10c95363)
+2025-12-23 08:35:06,529 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-4xx'
+2025-12-23 08:35:06,529 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' uses pyinotify {}
+2025-12-23 08:35:06,530 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 08:35:06,530 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-12-23 08:35:06,531 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 08:35:06,531 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 08:35:06,531 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:35:06,531 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 0, hash = b7d8de338bf2e9c9e1fb7feaf804160d10c95363)
+2025-12-23 08:35:06,531 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-flood'
+2025-12-23 08:35:06,531 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' uses pyinotify {}
+2025-12-23 08:35:06,532 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 08:35:06,532 fail2ban.filter         [1]: INFO      maxRetry: 15
+2025-12-23 08:35:06,533 fail2ban.filter         [1]: INFO      findtime: 5
+2025-12-23 08:35:06,533 fail2ban.actions        [1]: INFO      banTime: 60
+2025-12-23 08:35:06,533 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 08:35:06,533 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 0, hash = b7d8de338bf2e9c9e1fb7feaf804160d10c95363)
+2025-12-23 08:35:06,533 fail2ban.filtersystemd  [1]: INFO    [sshd] Jail is in operation now (process new journal entries)
+2025-12-23 08:35:06,534 fail2ban.jail           [1]: INFO    Jail 'sshd' started
+2025-12-23 08:35:06,534 fail2ban.jail           [1]: INFO    Jail 'nginx-scan' started
+2025-12-23 08:35:06,542 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' started
+2025-12-23 08:35:06,547 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' started
+2025-12-23 08:35:10,477 fail2ban.filter         [1]: INFO    [nginx-scan] Found 192.168.65.1 - 2025-12-23 08:35:10
+2025-12-23 08:35:10,488 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:35:10
+2025-12-23 08:35:10,488 fail2ban.filter         [1]: INFO    [nginx-scan] Found 192.168.65.1 - 2025-12-23 08:35:10
+2025-12-23 08:35:10,489 fail2ban.filter         [1]: INFO    [nginx-scan] Found 192.168.65.1 - 2025-12-23 08:35:10
+2025-12-23 08:35:10,488 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:35:10
+2025-12-23 08:35:10,489 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:35:10
+2025-12-23 08:35:10,489 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:35:10
+2025-12-23 08:35:10,543 fail2ban.actions        [1]: NOTICE  [nginx-scan] Ban 192.168.65.1
+2025-12-23 08:35:17,953 fail2ban.filter         [1]: INFO    [nginx-scan] Found 192.168.65.1 - 2025-12-23 08:35:17
+2025-12-23 08:35:17,953 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 08:35:17

@@ -4,6 +4,17 @@ findtime = 10m
 maxretry = 3
 banaction = iptables-multiport
 
+[nginx-scan]
+enabled  = true
+port     = http,https
+filter   = nginx-scan
+logpath  = /var/logs/nginx/access.log
+
+findtime = 1s
+maxretry = 3
+bantime  = 5m
+
+
 [nginx-4xx]
 enabled  = true
 port     = http
