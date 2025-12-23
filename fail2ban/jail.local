@@ -16,13 +16,13 @@ port     = http
 filter   = nginx-flood
 logpath  = /var/logs/nginx/access.log
 findtime = 5s
-maxretry = 50
-bantime  = 5m
+maxretry = 15
+bantime  = 1m
 
-[sshd-pam]
+[sshd]
 enabled  = true
 port     = 2222
-filter   = sshd-pam
+filter   = sshd
 logpath  = /logs/ssh/auth.log
 maxretry = 5
 findtime = 10m
