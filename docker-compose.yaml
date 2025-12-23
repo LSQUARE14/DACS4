@@ -7,7 +7,7 @@
       volumes:
         - ./nginx/nginx.conf:/etc/nginx/nginx.conf:rw
         - ./nginx/html:/usr/share/nginx/html:rw
-        - ./nginx/logs:/var/log/dacs4-nginx:rw
+        - ./nginx/logs:/var/log/nginx:rw
       restart: unless-stopped
 
     fail2ban:
@@ -17,7 +17,8 @@
       cap_add:
         - NET_ADMIN
       volumes:
-        - nginx_logs:/logs/nginx:ro
+        - ./fail2ban/fail2ban.log:/var/log/fail2ban.log:rw
+        - ./nginx/logs:/var/logs/nginx:ro
         - ssh_logs:/logs/ssh:ro
       depends_on:
         - nginx

@@ -8,13 +8,13 @@ banaction = iptables-multiport
 enabled  = true
 port     = http
 filter   = nginx-4xx
-logpath  = /logs/nginx/access.log
+logpath  = /var/logs/nginx/access.log
 
 [nginx-flood]
 enabled  = true
 port     = http
 filter   = nginx-flood
-logpath  = /logs/nginx/access.log
+logpath  = /var/logs/nginx/access.log
 findtime = 5s
 maxretry = 50
 bantime  = 5m

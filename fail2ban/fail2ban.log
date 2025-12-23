@@ -1,0 +1,67 @@
+2025-12-23 02:38:50,019 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-12-23 02:38:50,019 fail2ban.server         [1]: INFO    Starting Fail2ban v1.1.0
+2025-12-23 02:38:50,021 fail2ban.observer       [1]: INFO    Observer start...
+2025-12-23 02:38:50,024 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-12-23 02:38:50,025 fail2ban.database       [1]: WARNING New database created. Version '4'
+2025-12-23 02:38:50,025 fail2ban.jail           [1]: INFO    Creating new jail 'sshd'
+2025-12-23 02:38:50,027 fail2ban.jail           [1]: INFO    Jail 'sshd' uses systemd {}
+2025-12-23 02:38:50,028 fail2ban.jail           [1]: INFO    Initiated 'systemd' backend
+2025-12-23 02:38:50,028 fail2ban.filter         [1]: INFO      maxLines: 1
+2025-12-23 02:38:50,034 fail2ban.filtersystemd  [1]: INFO    [sshd] Added journal match for: '_SYSTEMD_UNIT=ssh.service + _COMM=sshd'
+2025-12-23 02:38:50,034 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-12-23 02:38:50,034 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 02:38:50,034 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 02:38:50,034 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 02:38:50,035 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-4xx'
+2025-12-23 02:38:50,038 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' uses pyinotify {}
+2025-12-23 02:38:50,038 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 02:38:50,039 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-12-23 02:38:50,039 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 02:38:50,039 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 02:38:50,039 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 02:38:50,040 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 0, hash = b7d8de338bf2e9c9e1fb7feaf804160d10c95363)
+2025-12-23 02:38:50,040 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-flood'
+2025-12-23 02:38:50,040 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' uses pyinotify {}
+2025-12-23 02:38:50,041 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 02:38:50,042 fail2ban.filter         [1]: INFO      maxRetry: 50
+2025-12-23 02:38:50,042 fail2ban.filter         [1]: INFO      findtime: 5
+2025-12-23 02:38:50,042 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 02:38:50,042 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 02:38:50,042 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 0, hash = b7d8de338bf2e9c9e1fb7feaf804160d10c95363)
+2025-12-23 02:38:50,042 fail2ban.transmitter    [1]: ERROR   Jail 'sshd-pam' skipped, because of wrong configuration: Unable to read the filter 'sshd-pam'
+2025-12-23 02:38:50,043 fail2ban.filtersystemd  [1]: INFO    [sshd] Jail is in operation now (process new journal entries)
+2025-12-23 02:38:50,043 fail2ban.jail           [1]: INFO    Jail 'sshd' started
+2025-12-23 02:38:50,044 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' started
+2025-12-23 02:38:50,051 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' started
+2025-12-23 02:39:45,739 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:39:45
+2025-12-23 02:40:04,845 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:40:04
+2025-12-23 02:40:04,858 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:40:04
+2025-12-23 02:40:04,860 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:40:04
+2025-12-23 02:40:04,861 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:40:04
+2025-12-23 02:40:12,368 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:40:12
+2025-12-23 02:41:00,790 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:41:00
+2025-12-23 02:42:16,264 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:42:15
+2025-12-23 02:43:20,628 fail2ban.transmitter    [1]: ERROR   Command ['get', 'nginx-flood', 'banlist'] has failed. Received Exception('Invalid command (no get action or not yet implemented)')
+2025-12-23 02:43:30,970 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:43:30
+2025-12-23 02:44:17,949 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:17
+2025-12-23 02:44:17,976 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:17
+2025-12-23 02:44:18,427 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:18
+2025-12-23 02:44:18,445 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:18
+2025-12-23 02:44:18,630 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:18
+2025-12-23 02:44:18,658 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:18
+2025-12-23 02:44:18,790 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:18
+2025-12-23 02:44:18,807 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:18
+2025-12-23 02:44:18,969 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:18
+2025-12-23 02:44:18,983 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:18
+2025-12-23 02:44:33,598 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:33
+2025-12-23 02:44:33,615 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:33
+2025-12-23 02:44:34,318 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:34
+2025-12-23 02:44:34,319 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:34
+2025-12-23 02:44:34,457 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:34
+2025-12-23 02:44:34,484 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:34
+2025-12-23 02:44:57,714 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:44:57
+2025-12-23 02:45:54,308 fail2ban.transmitter    [1]: ERROR   Command ['get', 'nginx-flood', 'banlist'] has failed. Received Exception('Invalid command (no get action or not yet implemented)')
+2025-12-23 02:46:08,963 fail2ban.transmitter    [1]: ERROR   Command ['get', 'nginx-4xx', 'banlist'] has failed. Received Exception('Invalid command (no get action or not yet implemented)')
+2025-12-23 02:46:11,126 fail2ban.transmitter    [1]: ERROR   Command ['get', 'nginx-flood', 'banlist'] has failed. Received Exception('Invalid command (no get action or not yet implemented)')
+2025-12-23 02:46:13,029 fail2ban.transmitter    [1]: ERROR   Command ['get', 'nginx-flood', 'banlist'] has failed. Received Exception('Invalid command (no get action or not yet implemented)')
+2025-12-23 02:46:13,128 fail2ban.filter         [1]: INFO    [nginx-flood] Found 192.168.65.1 - 2025-12-23 02:46:12
