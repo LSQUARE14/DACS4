@@ -608,3 +608,276 @@
 2025-12-23 09:00:01,043 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
 2025-12-23 09:01:16,342 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
 2025-12-23 09:01:16,343 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:04:12,148 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:04:12,148 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:04:12,916 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:04:12,916 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:04:54,769 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:04:54,769 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:04:54,879 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:04:54,879 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:06:10,176 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 09:06:10,176 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 10:29:41,685 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 10:29:41,685 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 10:29:41,880 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 10:29:41,881 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 10:30:57,180 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 10:30:57,180 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 13:44:30,706 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-12-23 13:44:30,706 fail2ban.server         [1]: INFO    Starting Fail2ban v1.1.0
+2025-12-23 13:44:30,707 fail2ban.observer       [1]: INFO    Observer start...
+2025-12-23 13:44:30,707 fail2ban.asyncserver    [1]: ERROR   Fail2ban seems to be already running
+2025-12-23 13:44:30,708 fail2ban.asyncserver    [1]: WARNING Forcing execution of the server
+2025-12-23 13:44:30,716 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-12-23 13:44:30,720 fail2ban.jail           [1]: INFO    Creating new jail 'sshd'
+2025-12-23 13:44:30,734 fail2ban.jail           [1]: INFO    Jail 'sshd' uses systemd {}
+2025-12-23 13:44:30,736 fail2ban.jail           [1]: INFO    Initiated 'systemd' backend
+2025-12-23 13:44:30,737 fail2ban.filter         [1]: INFO      maxLines: 1
+2025-12-23 13:44:30,749 fail2ban.filtersystemd  [1]: INFO    [sshd] Added journal match for: '_SYSTEMD_UNIT=ssh.service + _COMM=sshd'
+2025-12-23 13:44:30,750 fail2ban.filter         [1]: INFO      maxRetry: 5
+2025-12-23 13:44:30,750 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 13:44:30,750 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 13:44:30,751 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 13:44:30,751 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-scan'
+2025-12-23 13:44:30,764 fail2ban.jail           [1]: INFO    Jail 'nginx-scan' uses pyinotify {}
+2025-12-23 13:44:30,767 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 13:44:30,768 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-12-23 13:44:30,769 fail2ban.filter         [1]: INFO      findtime: 1
+2025-12-23 13:44:30,769 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 13:44:30,769 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 13:44:30,773 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 45125, hash = 2e2dfc9cf5b925514f400915aa7da201e3e90267)
+2025-12-23 13:44:30,775 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-4xx'
+2025-12-23 13:44:30,776 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' uses pyinotify {}
+2025-12-23 13:44:30,777 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 13:44:30,778 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-12-23 13:44:30,779 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-23 13:44:30,780 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-23 13:44:30,780 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 13:44:30,782 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 45125, hash = 2e2dfc9cf5b925514f400915aa7da201e3e90267)
+2025-12-23 13:44:30,783 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-flood'
+2025-12-23 13:44:30,784 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' uses pyinotify {}
+2025-12-23 13:44:30,785 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-23 13:44:30,786 fail2ban.filter         [1]: INFO      maxRetry: 15
+2025-12-23 13:44:30,787 fail2ban.filter         [1]: INFO      findtime: 5
+2025-12-23 13:44:30,787 fail2ban.actions        [1]: INFO      banTime: 60
+2025-12-23 13:44:30,788 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-23 13:44:30,789 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 45125, hash = 2e2dfc9cf5b925514f400915aa7da201e3e90267)
+2025-12-23 13:44:30,791 fail2ban.filtersystemd  [1]: INFO    [sshd] Jail is in operation now (process new journal entries)
+2025-12-23 13:44:30,792 fail2ban.jail           [1]: INFO    Jail 'sshd' started
+2025-12-23 13:44:30,795 fail2ban.jail           [1]: INFO    Jail 'nginx-scan' started
+2025-12-23 13:44:30,797 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' started
+2025-12-23 13:44:30,798 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' started
+2025-12-23 13:44:54,002 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 13:44:54,002 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 13:44:54,003 fail2ban.filter         [1]: WARNING [nginx-scan] Ignoring all log entries older than 1s; these are probably messages generated while fail2ban was not running.
+2025-12-23 13:44:54,003 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 13:44:54,003 fail2ban.filter         [1]: WARNING [nginx-scan] Please check a jail for a timing issue. Line with odd timestamp: 172.18.0.1 - - [23/Dec/2025:13:44:53 +0000] "GET /favicon.ico HTTP/1.1" 000 0 "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0"
+2025-12-23 13:46:09,311 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 13:46:09,312 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:01,511 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:01,511 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:01,718 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:01,718 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:53,113 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:53,113 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:53,254 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:53,255 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:53,732 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:53,732 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:53,847 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:53,847 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:53,958 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:53,959 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,050 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,050 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,190 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,190 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,277 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,278 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,298 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,298 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,386 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,387 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,434 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,434 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,591 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,591 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,610 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,611 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,736 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:54,736 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:55,195 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:55,195 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:55,273 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:03:55,273 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:04:14,010 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:04:14,010 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:04:17,932 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:04:17,932 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:04:17,932 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:04:17,933 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:04:17,933 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:04:17,933 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:04:25,291 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:04:25,291 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:05,353 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:05,353 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:05,353 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:05,353 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:05,354 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:05,354 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:10,273 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:10,274 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:11,014 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:11,014 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:11,425 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:11,425 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:11,665 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:11,666 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:11,748 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:11,748 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:11,860 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:11,860 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:11,955 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:11,956 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,079 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,079 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,163 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,163 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,188 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,189 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,280 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,281 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,405 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,405 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,493 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,494 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,529 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,530 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,530 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,531 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,696 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,696 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,716 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,717 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,888 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,888 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,888 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,889 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,990 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:12,990 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:13,111 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:13,111 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:13,214 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:13,214 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:13,214 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:13,215 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:13,311 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:13,312 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:13,448 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:13,448 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:13,546 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:13,547 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:14,272 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:14,272 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:14,740 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:14,740 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:14,819 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:05:14,819 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:16:37,841 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:16:37,842 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:16:37,842 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:16:37,842 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:16:37,843 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:16:37,843 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:16:45,217 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:16:45,218 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:00,753 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:00,753 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:00,754 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:00,754 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:00,755 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:00,755 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:08,134 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:08,135 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:34,482 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:34,482 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:34,482 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:34,483 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:34,483 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:34,484 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:41,896 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-23 16:17:41,896 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-24 09:12:27,760 fail2ban.server         [1]: INFO    Shutdown in progress...
+2025-12-24 09:12:27,763 fail2ban.observer       [1]: INFO    Observer stop ... try to end queue 5 seconds
+2025-12-24 09:12:27,784 fail2ban.observer       [1]: INFO    Observer stopped, 0 events remaining.
+2025-12-24 09:12:27,824 fail2ban.server         [1]: INFO    Stopping all jails
+2025-12-24 09:12:27,826 fail2ban.filter         [1]: INFO    Removed logfile: '/var/logs/nginx/access.log'
+2025-12-24 09:12:27,827 fail2ban.filter         [1]: INFO    Removed logfile: '/var/logs/nginx/access.log'
+2025-12-24 09:12:27,828 fail2ban.filter         [1]: INFO    Removed logfile: '/var/logs/nginx/access.log'
+2025-12-24 09:12:27,930 fail2ban.actions        [1]: NOTICE  [sshd] Flush ticket(s) with iptables-multiport
+2025-12-24 09:12:27,931 fail2ban.jail           [1]: INFO    Jail 'sshd' stopped
+2025-12-24 09:12:28,130 fail2ban.actions        [1]: NOTICE  [nginx-4xx] Flush ticket(s) with iptables-multiport
+2025-12-24 09:12:28,239 fail2ban.actions        [1]: NOTICE  [nginx-flood] Flush ticket(s) with iptables-multiport
+2025-12-24 09:12:28,272 fail2ban.actions        [1]: NOTICE  [nginx-scan] Flush ticket(s) with iptables-multiport
+2025-12-24 09:12:28,273 fail2ban.jail           [1]: INFO    Jail 'nginx-scan' stopped
+2025-12-24 09:12:28,273 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' stopped
+2025-12-24 09:12:28,274 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' stopped
+2025-12-24 09:12:28,275 fail2ban.database       [1]: INFO    Connection to database closed.
+2025-12-24 09:12:28,277 fail2ban.server         [1]: INFO    Exiting Fail2ban
+2025-12-24 09:12:29,340 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-12-24 09:12:29,340 fail2ban.server         [1]: INFO    Starting Fail2ban v1.1.0
+2025-12-24 09:12:29,341 fail2ban.observer       [1]: INFO    Observer start...
+2025-12-24 09:12:29,349 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-12-24 09:12:29,351 fail2ban.jail           [1]: INFO    Creating new jail 'sshd'
+2025-12-24 09:12:29,360 fail2ban.jail           [1]: INFO    Jail 'sshd' uses systemd {}
+2025-12-24 09:12:29,360 fail2ban.jail           [1]: INFO    Initiated 'systemd' backend
+2025-12-24 09:12:29,361 fail2ban.filter         [1]: INFO      maxLines: 1
+2025-12-24 09:12:29,369 fail2ban.filtersystemd  [1]: INFO    [sshd] Added journal match for: '_SYSTEMD_UNIT=ssh.service + _COMM=sshd'
+2025-12-24 09:12:29,369 fail2ban.filter         [1]: INFO      maxRetry: 5
+2025-12-24 09:12:29,369 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-24 09:12:29,370 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-24 09:12:29,370 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-24 09:12:29,370 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-scan'
+2025-12-24 09:12:29,380 fail2ban.jail           [1]: INFO    Jail 'nginx-scan' uses pyinotify {}
+2025-12-24 09:12:29,381 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-24 09:12:29,382 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-12-24 09:12:29,383 fail2ban.filter         [1]: INFO      findtime: 1
+2025-12-24 09:12:29,383 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-24 09:12:29,383 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-24 09:12:29,384 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 59703, hash = 2e2dfc9cf5b925514f400915aa7da201e3e90267)
+2025-12-24 09:12:29,385 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-4xx'
+2025-12-24 09:12:29,385 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' uses pyinotify {}
+2025-12-24 09:12:29,386 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-24 09:12:29,387 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-12-24 09:12:29,388 fail2ban.filter         [1]: INFO      findtime: 600
+2025-12-24 09:12:29,388 fail2ban.actions        [1]: INFO      banTime: 300
+2025-12-24 09:12:29,388 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-24 09:12:29,390 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 59703, hash = 2e2dfc9cf5b925514f400915aa7da201e3e90267)
+2025-12-24 09:12:29,391 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-flood'
+2025-12-24 09:12:29,391 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' uses pyinotify {}
+2025-12-24 09:12:29,392 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-12-24 09:12:29,393 fail2ban.filter         [1]: INFO      maxRetry: 15
+2025-12-24 09:12:29,393 fail2ban.filter         [1]: INFO      findtime: 5
+2025-12-24 09:12:29,394 fail2ban.actions        [1]: INFO      banTime: 60
+2025-12-24 09:12:29,394 fail2ban.filter         [1]: INFO      encoding: utf-8
+2025-12-24 09:12:29,395 fail2ban.filter         [1]: INFO    Added logfile: '/var/logs/nginx/access.log' (pos = 59703, hash = 2e2dfc9cf5b925514f400915aa7da201e3e90267)
+2025-12-24 09:12:29,396 fail2ban.filtersystemd  [1]: INFO    [sshd] Jail is in operation now (process new journal entries)
+2025-12-24 09:12:29,397 fail2ban.jail           [1]: INFO    Jail 'sshd' started
+2025-12-24 09:12:29,398 fail2ban.jail           [1]: INFO    Jail 'nginx-scan' started
+2025-12-24 09:12:29,399 fail2ban.jail           [1]: INFO    Jail 'nginx-4xx' started
+2025-12-24 09:12:29,402 fail2ban.jail           [1]: INFO    Jail 'nginx-flood' started
+2025-12-24 09:12:58,010 fail2ban.filter         [1]: WARNING [nginx-scan] Ignoring all log entries older than 1s; these are probably messages generated while fail2ban was not running.
+2025-12-24 09:12:58,011 fail2ban.filter         [1]: WARNING [nginx-scan] Please check a jail for a timing issue. Line with odd timestamp: 172.18.0.1 - - [24/Dec/2025:09:12:57 +0000] "GET / HTTP/1.1" 200 15165 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
+2025-12-24 09:12:58,014 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-24 09:12:58,015 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-24 09:12:58,015 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-24 09:13:05,512 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-24 09:13:05,513 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-24 09:14:02,692 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-24 09:14:02,693 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-24 09:14:03,099 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
+2025-12-24 09:14:03,099 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-24 09:15:18,392 fail2ban.filter         [1]: INFO    [nginx-scan] Ignore 172.18.0.1 by ignoreself rule
+2025-12-24 09:15:18,393 fail2ban.filter         [1]: INFO    [nginx-flood] Ignore 172.18.0.1 by ignoreself rule
